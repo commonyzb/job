@@ -8,10 +8,20 @@ public class Recruitment {
     private String position;
 
     private String username;
+    
+    private String demend;
+
+    private Integer salaryhight;
+
+    private Integer salarylow;
+
+    private Integer experience;
 
     private Date worktime;
 
     private String workplace;
+    
+    private String workdescribe;
 
     private String contacts;
 
@@ -51,6 +61,38 @@ public class Recruitment {
         this.username = username == null ? null : username.trim();
     }
 
+    public String getDemend() {
+		return demend;
+	}
+
+	public void setDemend(String demend) {
+		this.demend = demend == null ? null : demend.trim();
+	}
+
+	public Integer getSalaryhight() {
+        return salaryhight;
+    }
+
+    public void setSalaryhight(Integer salaryhight) {
+        this.salaryhight = salaryhight;
+    }
+
+    public Integer getSalarylow() {
+        return salarylow;
+    }
+
+    public void setSalarylow(Integer salarylow) {
+        this.salarylow = salarylow;
+    }
+
+    public Integer getExperience() {
+        return experience;
+    }
+
+    public void setExperience(Integer experience) {
+        this.experience = experience;
+    }
+
     public Date getWorktime() {
         return worktime;
     }
@@ -67,7 +109,15 @@ public class Recruitment {
         this.workplace = workplace == null ? null : workplace.trim();
     }
 
-    public String getContacts() {
+    public String getWorkdescribe() {
+		return workdescribe;
+	}
+
+	public void setWorkdescribe(String workdescribe) {
+		this.workdescribe = workdescribe == null ? null : workdescribe.trim();
+	}
+
+	public String getContacts() {
         return contacts;
     }
 

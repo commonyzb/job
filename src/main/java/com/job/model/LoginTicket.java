@@ -13,10 +13,6 @@ public class LoginTicket {
 
     private Integer status;
 
-    private String ip;
-
-    private String os;
-
     public Integer getId() {
         return id;
     }
@@ -55,21 +51,5 @@ public class LoginTicket {
 
     public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip == null ? null : ip.trim();
-    }
-
-    public String getOs() {
-        return os;
-    }
-
-    public void setOs(String os) {
-        this.os = os == null ? null : os.trim();
     }
 }

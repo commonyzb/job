@@ -28,6 +28,16 @@ public class Resume {
     private String hobby;
 
     private String speciality;
+    
+    private String intruduce;
+    
+    private String experience;
+
+    private Integer worktime;
+
+    private Integer salaryHight;
+
+    private Integer salaryLow;
 
     private String treatment;
 
@@ -147,6 +157,46 @@ public class Resume {
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality == null ? null : speciality.trim();
+    }
+
+    public String getIntruduce() {
+		return intruduce;
+	}
+
+	public void setIntruduce(String intruduce) {
+		this.intruduce = intruduce == null ? null : intruduce.trim();
+	}
+
+	public String getExperience() {
+		return experience;
+	}
+
+	public void setExperience(String experience) {
+		this.experience = experience == null ? null : experience.trim();
+	}
+
+	public Integer getWorktime() {
+        return worktime;
+    }
+
+    public void setWorktime(Integer worktime) {
+        this.worktime = worktime;
+    }
+
+    public Integer getSalaryHight() {
+        return salaryHight;
+    }
+
+    public void setSalaryHight(Integer salaryHight) {
+        this.salaryHight = salaryHight;
+    }
+
+    public Integer getSalaryLow() {
+        return salaryLow;
+    }
+
+    public void setSalaryLow(Integer salaryLow) {
+        this.salaryLow = salaryLow;
     }
 
     public String getTreatment() {

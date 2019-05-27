@@ -26,7 +26,7 @@
         </javaTypeResolver>
 
         <!-- targetProject:生成PO类的位置，重要！！ -->
-        <javaModelGenerator targetPackage="com.job.pojo"
+        <javaModelGenerator targetPackage="com.job.model"
             targetProject=".\src\main\java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="false" />
@@ -48,7 +48,8 @@
         <table tableName="admin"></table>
         <table tableName="knowledge"></table>
         <table tableName="recruitment"></table>
-        <table tableName="recruitment_record"></table>      
+        <table tableName="recruitment_record"></table>    
+        <table tableName="message"></table>    
         <table tableName="resume"></table>      
         <table tableName="shop_detail"></table>      
         <table tableName="subtype"></table>      
