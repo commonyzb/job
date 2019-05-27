@@ -3,6 +3,7 @@ package com.job.model;
 import java.util.Date;
 
 public class Recruitment {
+	
     private Integer id;
 
     private String position;
@@ -11,9 +12,9 @@ public class Recruitment {
     
     private String demend;
 
-    private Integer salaryhight;
+    private Integer salaryHight;
 
-    private Integer salarylow;
+    private Integer salaryLow;
 
     private Integer experience;
 
@@ -69,20 +70,20 @@ public class Recruitment {
 		this.demend = demend == null ? null : demend.trim();
 	}
 
-	public Integer getSalaryhight() {
-        return salaryhight;
+	public Integer getSalaryHight() {
+        return salaryHight;
     }
 
-    public void setSalaryhight(Integer salaryhight) {
-        this.salaryhight = salaryhight;
+    public void setSalaryhight(Integer salaryHight) {
+        this.salaryHight = salaryHight;
     }
 
-    public Integer getSalarylow() {
-        return salarylow;
+    public Integer getSalaryLow() {
+        return salaryLow;
     }
 
-    public void setSalarylow(Integer salarylow) {
-        this.salarylow = salarylow;
+    public void setSalaryLow(Integer salaryLow) {
+        this.salaryLow = salaryLow;
     }
 
     public Integer getExperience() {
