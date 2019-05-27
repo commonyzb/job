@@ -8,6 +8,10 @@ public class LoginTicket {
     private Integer userid;
 
     private String ticket;
+    
+    private String device;
+    
+    private String ip;
 
     private Date expired;
 
@@ -37,7 +41,23 @@ public class LoginTicket {
         this.ticket = ticket == null ? null : ticket.trim();
     }
 
-    public Date getExpired() {
+    public String getDevice() {
+		return device;
+	}
+
+	public void setDevice(String device) {
+		this.device = device == null ? null : device.trim();
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip == null ? null : ip.trim();
+	}
+
+	public Date getExpired() {
         return expired;
     }
 
