@@ -8,6 +8,8 @@ public class Recruitment {
 
     private String position;
 
+    private Integer userid;
+    
     private String username;
     
     private String demend;
@@ -34,7 +36,7 @@ public class Recruitment {
 
     private Integer hit;
 
-    private String typename;
+    private int typeid;
 
     private Integer freeze;
 
@@ -54,7 +56,15 @@ public class Recruitment {
         this.position = position == null ? null : position.trim();
     }
 
-    public String getUsername() {
+    public Integer getUserid() {
+		return userid;
+	}
+
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
+
+	public String getUsername() {
         return username;
     }
 
@@ -158,12 +168,12 @@ public class Recruitment {
         this.hit = hit;
     }
 
-    public String getTypename() {
-        return typename;
+    public Integer getTypeid() {
+        return typeid;
     }
 
-    public void setTypename(String typename) {
-        this.typename = typename == null ? null : typename.trim();
+    public void setTypeid(Integer typeid) {
+        this.typeid = typeid;
     }
 
     public Integer getFreeze() {
