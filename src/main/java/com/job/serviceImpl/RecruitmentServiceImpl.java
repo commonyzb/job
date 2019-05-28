@@ -1,5 +1,6 @@
 package com.job.serviceImpl;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -98,6 +99,21 @@ public class RecruitmentServiceImpl implements RecruitmentService {
 	@Override
 	public int setSuper(int freeze, int id) {
 		return recruitmentDAO.setSuper(freeze, id);
+	}
+
+	@Override
+	public ArrayList<Recruitment> getRecruitmentListById(int userid) {
+		return recruitmentDAO.getRecruitmentListById(userid);
+	}
+
+	@Override
+	public ArrayList<Recruitment> getRecruitmentListByUserid(String username) {
+		return recruitmentDAO.getRecruitmentListByUserid(username);
+	}
+
+	@Override
+	public int setStatus(int status, int id) {
+		return recruitmentDAO.setStatus(status, id);
 	}
 
 }
