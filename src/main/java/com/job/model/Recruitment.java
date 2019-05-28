@@ -35,9 +35,11 @@ public class Recruitment {
     private Date time;
 
     private Integer hit;
+    
+    private Integer typeid;
 
-    private int typeid;
-
+    private Integer status;
+    
     private Integer freeze;
 
     public Integer getId() {
@@ -176,7 +178,15 @@ public class Recruitment {
         this.typeid = typeid;
     }
 
-    public Integer getFreeze() {
+    public Integer getStatus() {
+		return status;
+	}
+
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	public Integer getFreeze() {
         return freeze;
     }
 
