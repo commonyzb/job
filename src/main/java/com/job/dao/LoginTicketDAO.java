@@ -16,6 +16,7 @@ public interface LoginTicketDAO {
 	String TABLE_NAME=" login_ticket ";
 	String INSERT_FIELDS=" userid,ticket,device,ip,expired,status ";
 	String SELECT_FIELDS=" id,"+INSERT_FIELDS;
+	
 	@Select({"SELECT * FROM",TABLE_NAME," WHERE id = #{id}"})
 	public LoginTicket getLoginTicketById(int id);
 	
