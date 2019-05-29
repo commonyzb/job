@@ -51,9 +51,9 @@ public class Resume {
 
     private Integer typeid;
 
-    private Integer hit;
+    private Integer hit = 0;
 
-    private Integer freeze;
+    private Integer freeze = 0;
 
     public Integer getId() {
         return id;

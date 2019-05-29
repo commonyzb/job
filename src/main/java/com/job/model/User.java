@@ -7,8 +7,8 @@ public class User {
 	private String username;
 	private String password;
 	private String salt;
-	private int type;
-	private int freeze;
+	private int type = 0;
+	private int freeze = 0;
 	
 	
     public Integer getId() {
