@@ -25,7 +25,7 @@ public interface RecruitmentRecordService {
 	/*
 	 * 根据商家id获取某商家的全部招聘投放记录
 	 */
-	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(int companyid);
+	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(int companyid, int start, int num);
 	
 	/*
 	 * 根据招聘信息id，修改招聘信息id

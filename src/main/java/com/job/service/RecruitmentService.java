@@ -14,12 +14,12 @@ public interface RecruitmentService {
 	/*
 	 * 根据商家账号id获取其发布的全部招聘信息
 	 */
-	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid);
+	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid, int start, int num);
 	
 	/*
 	 * 根据商家账户名获取其发布的全部招聘信息
 	 */
-	public ArrayList<Recruitment> getRecruitmentListByUsername(String username);
+	public ArrayList<Recruitment> getRecruitmentListByUsername(String username, int start, int num);
 	
 	/*
 	 *  根据招聘信息id获取该招聘信息的全部信息

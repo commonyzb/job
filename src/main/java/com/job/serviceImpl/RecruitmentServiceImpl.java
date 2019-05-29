@@ -102,13 +102,13 @@ public class RecruitmentServiceImpl implements RecruitmentService {
 	}
 
 	@Override
-	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid) {
-		return recruitmentDAO.getRecruitmentListByUserid(userid);
+	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid, int start, int num) {
+		return recruitmentDAO.getRecruitmentListByUserid(userid, start, num);
 	}
 
 	@Override
-	public ArrayList<Recruitment> getRecruitmentListByUsername(String username) {
-		return recruitmentDAO.getRecruitmentListByUsername(username);
+	public ArrayList<Recruitment> getRecruitmentListByUsername(String username, int start, int num) {
+		return recruitmentDAO.getRecruitmentListByUsername(username, start, num);
 	}
 
 	@Override
