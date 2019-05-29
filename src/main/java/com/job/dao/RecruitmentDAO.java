@@ -16,7 +16,7 @@ public interface RecruitmentDAO {
 	
 	String TABLE_NAME = " recruitment ";
 	String INSERT_FIELDS = " userid,username,position,demend,salaryHight,salaryLow,experience,"
-		   + "worktime,workplace,workdescribe,contacts,tel,address,time,hit,typeid,status,freeze ";
+		   + "worktime,workplace,workdescribe,contacts,tel,address,`time`,hit,typeid,status,freeze ";
 	String SELECT_FIELDS = " id," + INSERT_FIELDS;
 	
 	/*
@@ -24,20 +24,20 @@ public interface RecruitmentDAO {
 	 */
 	@Insert({"INSERT INTO ", TABLE_NAME, "(", INSERT_FIELDS, ") VALUES ( ",
 			"#{userid},#{username},#{position},#{demend},#{salaryHight},#{salaryLow},#{experience},#{worktime},",
-			"#{workplace},#{workdescribe},#{contacts},#{tel},#{address},#{time},#{hit},#{typeid},#{status},#{freeze}"})
+			"#{workplace},#{workdescribe},#{contacts},#{tel},#{address},#{time},#{hit},#{typeid},#{status},#{freeze})"})
 	public int addRecruitment(Recruitment recruitment);
 	
 	/*
 	 * 根据商家账号id获取其发布的全部招聘信息
 	 */
 	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE userid = #{userid} AND freeze=0"})
-	public ArrayList<Recruitment> getRecruitmentListById(int userid);
+	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid);
 	
 	/*
 	 * 根据商家账户名获取其发布的全部招聘信息
 	 */
 	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE username = #{username} AND freeze=0"})
-	public ArrayList<Recruitment> getRecruitmentListByUserid(String username);
+	public ArrayList<Recruitment> getRecruitmentListByUsername(String username);
 	
 	/*
 	 * 根据招聘信息id获取该招聘信息的全部信息

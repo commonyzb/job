@@ -34,13 +34,13 @@ public class Recruitment {
 
     private Date time;
 
-    private Integer hit;
+    private Integer hit = 0;
     
     private Integer typeid;
 
-    private Integer status;
+    private Integer status = 0;
     
-    private Integer freeze;
+    private Integer freeze = 0;
 
     public Integer getId() {
         return id;
@@ -193,4 +193,15 @@ public class Recruitment {
     public void setFreeze(Integer freeze) {
         this.freeze = freeze;
     }
+
+	@Override
+	public String toString() {
+		return "Recruitment [id=" + id + ", position=" + position + ", userid=" + userid + ", username=" + username
+				+ ", demend=" + demend + ", salaryHight=" + salaryHight + ", salaryLow=" + salaryLow + ", experience="
+				+ experience + ", worktime=" + worktime + ", workplace=" + workplace + ", workdescribe=" + workdescribe
+				+ ", contacts=" + contacts + ", tel=" + tel + ", address=" + address + ", time=" + time + ", hit=" + hit
+				+ ", typeid=" + typeid + ", status=" + status + ", freeze=" + freeze + "]";
+	}
+    
+    
 }

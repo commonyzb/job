@@ -10,38 +10,39 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.job.model.Recruitment;
+import com.job.model.RecruitmentRecord;
 
 @Mapper
 public interface RecruitmentRecordDAO {
 	
 	String TABLE_NAME = " recruitment_record ";
-	String INSERT_FIELDS = " recruitmentid,companyid,time,state,freeze,";
+	String INSERT_FIELDS = " recruitmentid,companyid,time,state,freeze";
 	String SELECT_FIELDS = " id," + INSERT_FIELDS;
 	
 	/*
 	 * 插入一条招聘投放记录
 	 */
 	@Insert({"INSERT INTO ", TABLE_NAME, "(", INSERT_FIELDS, ") VALUES ( ",
-			"#{id},#{companyid},#{time},#{state},#{freeze}"})
-	public int addRecruitment(Recruitment recruitment);
+			"#{recruitmentid},#{companyid},#{time},#{state},#{freeze})"})
+	public int addRecruitmentRecord(RecruitmentRecord recruitmentRecord);
 	
 	/*
 	 * 根据招聘投放记录id获取该招聘投放记录的全部信息
 	 */
 	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE id = #{id}"})
-	public Recruitment getRecruitmentRecorById(int id);
+	public RecruitmentRecord getRecruitmentRecorById(int id);
 	
 	/*
 	 * 根据招聘信息id获取该招聘投放记录的全部信息
 	 */
 	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE recruitmentid = #{recruitmentid} AND freeze=0"})
-	public Recruitment getRecruitmentRecorByRecid(int recruitmentid);
+	public RecruitmentRecord getRecruitmentRecorByRecid(int recruitmentid);
 	
 	/*
 	 * 根据商家id获取某商家的全部招聘投放记录
 	 */
 	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE companyid = #{companyid} AND freeze=0"})
-	public ArrayList<Recruitment> getRecruitmentRecorListByComid(int companyid);
+	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(int companyid);
 	
 	/*
 	 * 根据招聘信息id，修改招聘信息id
@@ -50,16 +51,10 @@ public interface RecruitmentRecordDAO {
 	public int setRecruitmentid(@Param("recruitmentid") int recruitmentid, @Param("id") int id);
 	
 	/*
-	 * 根据招聘信息id，修改用户账户
-	 */
-	@Update({"UPDATE ", TABLE_NAME, "SET username = #{username} WHERE id = #{id} AND freeze=0"})
-	public int setUsername(@Param("username") String username, @Param("id") int id);
-	
-	/*
 	 * 根据招聘信息id，修改商家账户
 	 */
-	@Update({"UPDATE ", TABLE_NAME, "SET company = #{company} WHERE id = #{id} AND freeze=0"})
-	public int setCompany(@Param("company") String company, @Param("id") int id);
+	@Update({"UPDATE ", TABLE_NAME, "SET companyid = #{companyid} WHERE id = #{id} AND freeze=0"})
+	public int setCompanyid(@Param("companyid") int companyid, @Param("id") int id);
 	
 	/*
 	 * 根据招聘信息id，修改投放时间
