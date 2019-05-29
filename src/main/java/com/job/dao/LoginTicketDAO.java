@@ -17,10 +17,8 @@ public interface LoginTicketDAO {
 	String INSERT_FIELDS=" userid,ticket,device,ip,expired,status ";
 	String SELECT_FIELDS=" id,"+INSERT_FIELDS;
 	
-<<<<<<< HEAD
-=======
+
 	/*根据Id查询LoginTicket*/
->>>>>>> 2f57bf2b667273671fa8d9f92f3211ef6f354230
 	@Select({"SELECT * FROM",TABLE_NAME," WHERE id = #{id}"})
 	public LoginTicket getLoginTicketById(int id);
 	
