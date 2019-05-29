@@ -41,8 +41,8 @@ public interface RecruitmentRecordDAO {
 	/*
 	 * 根据商家id获取某商家的全部招聘投放记录
 	 */
-	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE companyid = #{companyid} AND freeze=0"})
-	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(int companyid);
+	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE companyid = #{companyid} AND freeze=0 LIMIT #{start},#{num}"})
+	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(@Param("companyid") int companyid, @Param("start") int start, @Param("num") int num);
 	
 	/*
 	 * 根据招聘信息id，修改招聘信息id
