@@ -1,5 +1,6 @@
 package com.job.service;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import com.job.model.Recruitment;
@@ -9,6 +10,16 @@ public interface RecruitmentService {
 	 *  插入一条招聘信息
 	 */
 	public int addRecruitment(Recruitment recruitment);
+	
+	/*
+	 * 根据商家账号id获取其发布的全部招聘信息
+	 */
+	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid);
+	
+	/*
+	 * 根据商家账户名获取其发布的全部招聘信息
+	 */
+	public ArrayList<Recruitment> getRecruitmentListByUsername(String username);
 	
 	/*
 	 *  根据招聘信息id获取该招聘信息的全部信息
@@ -81,12 +92,17 @@ public interface RecruitmentService {
 	public int setHit(int hit, int id);
 	
 	/*
-	 * 根据招聘信息id，修改点击量信息
+	 * 根据招聘信息id，修改行业类型
 	 */
 	public int setTypeid(int typeid, int id);
 	
 	/*
-	 *  根据招聘信息id，修改该信息是否被删除
+	 * 根据招聘信息id，修改是否招聘结束，0为没有结束，1为结束，默认为0
+	 */
+	public int setStatus(int status, int id);
+	
+	/*
+	 *  根据招聘信息id，修改该招聘信息是否冻结 0为正常，1为冻结，默认为0
 	 */
 	public int setSuper(int freeze, int id);
 }
