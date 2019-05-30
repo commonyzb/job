@@ -20,7 +20,7 @@ public class RecruitmentServiceImpl implements RecruitmentService {
 	public int addRecruitment(Recruitment recruitment) {
 		return recruitmentDAO.addRecruitment(recruitment);
 	}
-
+	
 	@Override
 	public Recruitment getRecruitmentById(int id) {
 		return recruitmentDAO.getRecruitmentById(id);
