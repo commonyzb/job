@@ -25,7 +25,7 @@ public interface MessageDAO {
     
     /*更新Message实体中的From字段*/
     @Update({"UPDATE",TABLE_NAME,"SET `from` = #{from} WHERE id = #{id}"})
-	public int UpdateFrom(@Param("from")　String from,@Param("id") int id);
+	public int UpdateFrom(@Param("from") String from,@Param("id") int id);
     
     /*更新Message实体中的to字段*/
     @Update({"UPDATE",TABLE_NAME,"SET `to` = #{to} WHERE id = #{id}"})
