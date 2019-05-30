@@ -19,11 +19,13 @@ public interface LoginTicketDAO {
 	String INSERT_FIELDS=" userid,ticket,device,ip,expired,status ";
 	String SELECT_FIELDS=" id,"+INSERT_FIELDS;
 	
+	
 	/*根据Id查询LoginTicket*/
 	@Select({"SELECT * FROM",TABLE_NAME," WHERE id = #{id}"})
 	public LoginTicket getLoginTicketById(int id);
 	
-	/*添加LoginTicket*/
+	
+	/*向表中添加LoginTicket*/
 	@Insert({"INSERT INTO",TABLE_NAME,"(",INSERT_FIELDS,")"," VALUES(#{userid},#{ticket},#{device},#{ip},#{expired},#{status})"})
 	public int addLoginTicket(LoginTicket loginTicket);
 	
