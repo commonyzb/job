@@ -3,7 +3,6 @@ package com.job.model;
 public class Admin 
 {
     private Integer id;
-<<<<<<< HEAD
     private String admin_name = "";  
     private String admin_password ="";
     private String salt="";
@@ -14,38 +13,14 @@ public class Admin
     private Integer select = 0;
     private Integer freeze = 0;
 
-	public Integer getId() {
-=======
-
-    private String admin;
-
-    private Integer master = 0;
-
-    private Integer froze = 0;
-
-    private Integer delect = 0;
-
-    private Integer repassword = 0;
-
-    private Integer select = 0;
-
-    private Integer freeze = 0;
-
     public Integer getId() {
->>>>>>> 7a5bf986dccd408f1f2a7d63b106d2847cb1db8a
         return id;
     }
-/*	
+
 	public void setId(Integer id) {
         this.id = id;
     }
-*/
-    @Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return id+" "+admin_name+" "+admin_password+" "+salt+" "+master+" "+froze+" "+delete+" "+repassword+" "+select+" "+freeze;
-	}
-
+	
 	public String getSalt() {
 		return salt;
 	}
@@ -135,4 +110,10 @@ public class Admin
     public void setFreeze(Integer freeze) {
         this.freeze = freeze;
     }
+    
+    @Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return id+" "+admin_name+" "+admin_password+" "+salt+" "+master+" "+froze+" "+delete+" "+repassword+" "+select+" "+freeze;
+	}
 }
