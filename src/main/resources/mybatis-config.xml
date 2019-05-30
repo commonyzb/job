@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+	<properties resource="application.properties"/>
     <settings>
         <!-- Globally enables or disables any caches configured in any mapper under this configuration -->
         <setting name="cacheEnabled" value="true"/>
@@ -16,7 +17,30 @@
          as some drivers deny compatibility but still work -->
         <setting name="useGeneratedKeys" value="true"/>
     </settings>
-
+    <typeAliases>
+    	<typeAlias alias="admin" type="com.job.model.Admin"/>
+    	<typeAlias alias="knowledge" type="com.job.model.Knowledge"/>
+    </typeAliases>
+    <!-- 指定 MyBatis 所用日志的具体实现 -->
+	<!-- <settings> <setting name="logImpl" value="LOG4J"/> </settings> -->
+	<environments default="development">
+		<!-- 环境配置，即连接的数据库。 -->
+		<environment id="development">
+			<!-- 指定事务管理类型，type="JDBC"指直接简单使用了JDBC的提交和回滚设置 -->
+			<transactionManager type="JDBC" />
+			<!-- dataSource指数据源配置，POOLED是JDBC连接对象的数据源连接池的实现。 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="${spring.datasource.driver-class-name}" />
+				<property name="url"    value="${spring.datasource.url}" />
+				<property name="username"  value="${spring.datasource.username}" />
+				<property name="password"  value="${spring.datasource.password}" />								
+			</dataSource>
+		</environment>
+	</environments>
+    
+	<mappers>
+		<package name="com.job.dao"/>
+	</mappers>
     <!-- Continue going here -->
 
 </configuration>
