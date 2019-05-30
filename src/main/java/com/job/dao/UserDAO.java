@@ -46,17 +46,12 @@ public interface UserDAO {
 	 * 根据id更新用户状态
 	 */
 	@Update({ "UPDATE", TABLE_NAME, "SET freeze= #{freeze} where id= #{id}" })
-	public int setfreezeByid(int id);
+	public int setfreezeByid(@Param("id") int id,@Param("freeze") int freeze);
 
 	/*
 	 * 根据id更新用户类型
 	 */
 	@Update({ "UPDATE", TABLE_NAME, "SET type=#{type} where id=#{id}" })
-	public int settypeByid(int id);
+	public int settypeByid(@Param("id") int id,@Param("type") int type);
 
-	/*
-	 * 账号是否冻结
-	 */
-	@Update({ "UPDATE", TABLE_NAME, "SET freeze=#{freeze} where id= #{id}" })
-	public int setUserfreezeByid(@Param("id") int id, @Param("freeze") int freeze);
 }

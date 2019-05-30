@@ -23,18 +23,14 @@ public interface UserService {
 	 */
 	public int setpasswordByid(int id, String password);
 
-	/*
-	 * 根据id更新用户状态
-	 */
-	public int setFreezeByid(int id);
 
 	/*
 	 * 根据id更新用户类型
 	 */
-	public int setTypeByid(int id);
+	public int setTypeByid(int id,int type);
 
 	/*
-	 * 账号是否冻结
+	 * 根据id更新账号状态
 	 */
 	public int setFreezeByid(int id, int freeze);
 
