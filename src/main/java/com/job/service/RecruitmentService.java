@@ -27,6 +27,11 @@ public interface RecruitmentService {
 	public Recruitment getRecruitmentById(int id);
 	
 	/*
+	 * 根据招聘信息id，修改该招聘信息
+	 */
+	public int setRecruitment(Recruitment recruitment);
+	
+	/*
 	 * 根据招聘信息id，修改职位信息
 	 */
 	public int setPosition(String position, int id);

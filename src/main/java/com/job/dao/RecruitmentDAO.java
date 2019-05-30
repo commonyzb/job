@@ -46,6 +46,16 @@ public interface RecruitmentDAO {
 	public Recruitment getRecruitmentById(int id);
 	
 	/*
+	 * 根据招聘信息id，修改该招聘信息
+	 */
+	@Update({"UPDATE ", TABLE_NAME, "SET userid=#{userid},username=#{username},position=#{position},",
+		"demend=#{demend},salaryHight=#{salaryHight},salaryLow=#{salaryLow},experience=#{experience}",
+		"worktime=#{worktime},workplace=#{workplace},workdescribe=#{workdescribe},contacts=#{contacts}",
+		"tel=#{tel},address=#{address},time=#{time},hit=#{hit},typeid=#{typeid},status=#{status},freeze=#{freeze} ",
+		" WHERE id = #{id}"})
+	public int setRecruitment(Recruitment recruitment);
+	
+	/*
 	 * 根据招聘信息id，修改职位信息
 	 */
 	@Update({"UPDATE ", TABLE_NAME, "SET position = #{position} WHERE id = #{id} AND freeze=0"})
