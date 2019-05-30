@@ -33,8 +33,8 @@ public class RecruitmentRecordServiceImpl implements RecruitmentRecordService {
 	}
 
 	@Override
-	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(int companyid) {
-		return recruitmentRecordDAO.getRecruitmentRecorListByComid(companyid);
+	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(int companyid, int start, int num) {
+		return recruitmentRecordDAO.getRecruitmentRecorListByComid(companyid, start, num);
 	}
 
 	@Override

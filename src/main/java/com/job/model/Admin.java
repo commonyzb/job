@@ -5,17 +5,17 @@ public class Admin {
 
     private String admin;
 
-    private Integer master;
+    private Integer master = 0;
 
-    private Integer froze;
+    private Integer froze = 0;
 
-    private Integer delect;
+    private Integer delect = 0;
 
-    private Integer repassword;
+    private Integer repassword = 0;
 
-    private Integer select;
+    private Integer select = 0;
 
-    private Integer freeze;
+    private Integer freeze = 0;
 
     public Integer getId() {
         return id;

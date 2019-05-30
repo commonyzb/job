@@ -30,14 +30,14 @@ public interface RecruitmentDAO {
 	/*
 	 * 根据商家账号id获取其发布的全部招聘信息
 	 */
-	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE userid = #{userid} AND freeze=0"})
-	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid);
+	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE userid = #{userid} AND freeze=0 LIMIT #{start},#{num}"})
+	public ArrayList<Recruitment> getRecruitmentListByUserid(@Param("userid") int userid, @Param("start") int start, @Param("num") int num);
 	
 	/*
 	 * 根据商家账户名获取其发布的全部招聘信息
 	 */
-	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE username = #{username} AND freeze=0"})
-	public ArrayList<Recruitment> getRecruitmentListByUsername(String username);
+	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE username = #{username} AND freeze=0 LIMIT #{start},#{num}"})
+	public ArrayList<Recruitment> getRecruitmentListByUsername(@Param("username") String username, @Param("start") int start, @Param("num") int num);
 	
 	/*
 	 * 根据招聘信息id获取该招聘信息的全部信息

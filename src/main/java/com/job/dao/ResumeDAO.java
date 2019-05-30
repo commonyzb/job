@@ -21,8 +21,10 @@ public interface ResumeDAO {
 			+ "picture , createTime , typeid , hit , freeze ";
 	String SELECT_FILEDS = "id ," + INSERT_FILEDS;
 	
-	/**
+	/** 
 	 * 完善个人简历信息
+	 * @param resume
+	 * @return
 	 */
 	@Insert({"insert into "+TABLE_NAME+" ( "+INSERT_FILEDS+" ) values("
 			+ " #{userName} , #{trueName} , #{sex} , #{hight} , #{knowledge} , #{brithday} , #{address} ,"
@@ -47,14 +49,7 @@ public interface ResumeDAO {
 	/**
 	 * 更新简历信息
 	 */
-//	@Update({"update "+TABLE_NAME+" set username=#{userName} , trueName=#{trueName} , sex=#{sex} ,"
-//			+ " hight=#{hight} , knowledge=#{knowledge} , brithday=#{brithday} , address=#{address} ,"
-//			+ " naddress=#{naddress} , nation=#{nation} , school=#{school} , hobby=#{hobby} , "
-//			+ " speciality=#{speciality} , intruduce=#{intruduce} , experience=#{experience} , "
-//			+ " worktime=#{workTime} , salaryHight#{salaryHight} , salaryLow=#{salaryLow} , "
-//			+ " treatment=#{treatment} , tel=#{tel} , email=#{email} , picture=#{picture} , "
-//			+ " createTime=#{createTime} , typeId=#{typeId} , hit=#{hit} , freeze=#{freeze} "
-//			+ " where id=#{id}"})
+
 	@Update({"update "+TABLE_NAME+" set username=#{userName} , trueName=#{trueName} , sex=#{sex} ,"
 			+ " hight=#{hight} , knowledge=#{knowledge} , brithday=#{brithday} , address=#{address} ,"
 			+ " naddress=#{naddress} , nation=#{nation} , school=#{school} , hobby=#{hobby} , "
@@ -91,5 +86,5 @@ public interface ResumeDAO {
 	 * @return
 	 */
 	@Select({"select * from " +TABLE_NAME+" limit #{start},#{count} "})
-	public List<Resume> selectResumeByPage(int start,int count);
+	public List<Resume> selectResumeByPage(@Param("start") int start,@Param("count") int count);
 }

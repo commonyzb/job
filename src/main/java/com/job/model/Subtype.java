@@ -7,7 +7,7 @@ public class Subtype {
 
     private String typename;
 
-    private Integer hit;
+    private Integer hit = 0;
 
     public Integer getId() {
         return id;
