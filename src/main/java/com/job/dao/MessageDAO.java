@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
@@ -24,19 +25,19 @@ public interface MessageDAO {
     
     /*更新Message实体中的From字段*/
     @Update({"UPDATE",TABLE_NAME,"SET `from` = #{from} WHERE id = #{id}"})
-	public int UpdateFrom(String from,int id);
+	public int UpdateFrom(@Param("from")　String from,@Param("id") int id);
     
     /*更新Message实体中的to字段*/
     @Update({"UPDATE",TABLE_NAME,"SET `to` = #{to} WHERE id = #{id}"})
-	public int UpdateTo(String to,int id);
+	public int UpdateTo(@Param("to") String to,@Param("id") int id);
     
     /*更新Message实体中的msg字段*/
     @Update({"UPDATE",TABLE_NAME,"SET msg = #{msg} WHERE id = #{id}"})
-	public int UpdateMsg(String msg,int id);
+	public int UpdateMsg(@Param("msg") String msg,@Param("id") int id);
 
     /*更新Message实体中的Date字段*/
     @Update({"UPDATE",TABLE_NAME,"SET date = #{date} WHERE id = #{id}"})
-	public int UpdateDate(Date date,int id);
+	public int UpdateDate(@Param("date") Date date,@Param("id") int id);
     
     /*更新Message实体中的status字段用于标记是否可用*/
     @Update({"UPDATE",TABLE_NAME,"SET status = 0 WHERE id = #{id}"})
