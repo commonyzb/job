@@ -49,11 +49,11 @@ public class Resume {
 
     private Date createtime;
 
-    private String typename;
+    private Integer typeid;
 
-    private Integer hit;
+    private Integer hit = 0;
 
-    private Integer freeze;
+    private Integer freeze = 0;
 
     public Integer getId() {
         return id;
@@ -239,12 +239,12 @@ public class Resume {
         this.createtime = createtime;
     }
 
-    public String getTypename() {
-        return typename;
+    public Integer getTypename() {
+        return typeid;
     }
 
-    public void setTypename(String typename) {
-        this.typename = typename == null ? null : typename.trim();
+    public void setTypename(Integer typeid) {
+        this.typeid = typeid;
     }
 
     public Integer getHit() {

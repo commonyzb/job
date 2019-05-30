@@ -4,16 +4,16 @@ import java.util.Date;
 
 public class RecruitmentRecord {
     private Integer id;
-
-    private String username;
-
-    private String company;
+    
+    private Integer recruitmentid;
+    
+    private Integer companyid;
 
     private Date time;
 
-    private Integer state;
-
-    private Integer freeze;
+    private Integer state = 0;
+    
+    private Integer freeze = 0;
 
     public Integer getId() {
         return id;
@@ -23,20 +23,20 @@ public class RecruitmentRecord {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public Integer getRecruitmentid() {
+		return recruitmentid;
+	}
+
+	public void setRecruitmentid(Integer recruitmentid) {
+		this.recruitmentid = recruitmentid;
+	}
+
+    public Integer getCompanyid() {
+        return companyid;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company == null ? null : company.trim();
+    public void setCompanyid(Integer companyid) {
+        this.companyid = companyid;
     }
 
     public Date getTime() {
@@ -48,14 +48,14 @@ public class RecruitmentRecord {
     }
 
     public Integer getState() {
-        return state;
-    }
+		return state;
+	}
 
-    public void setState(Integer state) {
-        this.state = state;
-    }
+	public void setState(Integer state) {
+		this.state = state;
+	}
 
-    public Integer getFreeze() {
+	public Integer getFreeze() {
         return freeze;
     }
 

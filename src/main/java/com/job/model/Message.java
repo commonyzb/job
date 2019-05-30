@@ -11,7 +11,7 @@ public class Message {
 
     private Date date;
 
-    private Integer status;
+    private Integer status = 0;
 
     private String msg;
 

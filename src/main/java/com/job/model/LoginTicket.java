@@ -15,7 +15,7 @@ public class LoginTicket {
 
     private Date expired;
 
-    private Integer status;
+    private Integer status = 0;
 
     public Integer getId() {
         return id;

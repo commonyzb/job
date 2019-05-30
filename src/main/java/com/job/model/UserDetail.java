@@ -22,6 +22,8 @@ public class UserDetail {
     private String tel;
 
     private Date time;
+    
+    private Integer freeze = 0;
 
     public Integer getId() {
         return id;
@@ -102,4 +104,12 @@ public class UserDetail {
     public void setTime(Date time) {
         this.time = time;
     }
+
+	public Integer getFreeze() {
+		return freeze;
+	}
+
+	public void setFreeze(Integer freeze) {
+		this.freeze = freeze;
+	}
 }
