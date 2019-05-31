@@ -87,60 +87,60 @@ public interface AdminDAO {
 	 * 根据管理员账号id，修改其是否拥有超级管理员权限
 	 */
 	@Update({"UPDATE ", TABLE_NAME, "SET master = #{master} WHERE id = #{id}"})
-	public int setSuper(@Param("master") int master, @Param("id") int id);
+	public int setSuper(@Param("master") int master, @Param("id") String id);
 	
 	/*
 	 * 根据管理员Id，更改其管理员名
 	 */
 	@Update({"UPDATE ", TABLE_NAME, "SET admin_name = #{admin_name} WHERE id = #{id}"})
-	public int setAdmin_name(@Param("admin_name") String admin_name, @Param("id") int id);
+	public int setAdmin_name(@Param("admin_name") String admin_name, @Param("id") String id);
 	
 	/*
 	 * 根据管理员Id，更改其密码
 	 */
 	@Update({"UPDATE ", TABLE_NAME, "SET admin_password = #{admin_password} WHERE id = #{id}"})
-	public int setAdmin_password(@Param("admin_password") String admin_name, @Param("id") int id);
+	public int setAdmin_password(@Param("admin_password") String admin_name, @Param("id") String id);
 	
 	/*
 	 * 根据管理员Id，更改其salt值
 	 */
 	@Update({"UPDATE ",TABLE_NAME,"SET salt = #{salt} WHERE id = #{id}"})
-	public int setSalt(@Param("salt") String salt,@Param("id") int id);
+	public int setSalt(@Param("salt") String salt,@Param("id") String id);
 	
 	/*
 	 * 通过管理员ID更改其冻结权限
 	 */
 	@Update({"UPDATE ", TABLE_NAME, " SET froze = #{froze} WHERE id = #{id}"})
-	public int setFroze(@Param("froze") int froze,@Param("id") int id);
+	public int setFroze(@Param("froze") int froze,@Param("id") String id);
 	
 	/*
 	 * 通过管理员ID更改其删除权限
 	 */
 	@Update({"UPDATE ", TABLE_NAME, " SET `delete` = #{delete} WHERE id = #{id}"})
-	public int setDelete(@Param("delete") int delete,@Param("id") int id);
+	public int setDelete(@Param("delete") int delete,@Param("id") String id);
 	
 	/*
 	 * 通过管理员ID更改其修改密码权限
 	 */
 	@Update({"UPDATE ", TABLE_NAME, " SET repassword = #{repassword} WHERE id = #{id}"})
-	public int setRepassword(@Param("repassword") int repassword,@Param("id")int id);
+	public int setRepassword(@Param("repassword") int repassword,@Param("id")String id);
 	
 	/*
 	 * 通过管理员ID更改其查询权限
 	 */
 	@Update({"UPDATE ", TABLE_NAME, " SET `select` = #{select} WHERE id = #{id}"})
-	public int setSelect(@Param("select") int select,@Param("id") int id);
+	public int setSelect(@Param("select") int select,@Param("id") String id);
 	
 	/*
 	 * 通过管理员Id更改其账号是否被冻结
 	 */
 	@Update({"UPDATE ", TABLE_NAME, " SET freeze = #{freeze} WHERE id = #{id}"})
-	public int setFreeze(@Param("freeze") int freeze,@Param("id") int id);
+	public int setFreeze(@Param("freeze") int freeze,@Param("id") String id);
 	
 	/*
 	 * 通过ID删除管理员信息
 	 */
 	@Delete(value = { "DELETE FROM ",TABLE_NAME," WHERE id = #{id}" })
-	public int delAdminById(@Param("id") int id);
+	public int delAdminById(@Param("id") String id);
 		
 }

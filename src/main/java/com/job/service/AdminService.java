@@ -20,7 +20,7 @@ public interface AdminService
 	/*
 	 * 通过Id删除一名管理员
 	 */
-	int delAdmin(int id);
+	int delAdmin(String id);
 	
 	/*
 	 * 更新管理员信息
@@ -30,7 +30,7 @@ public interface AdminService
 	/*
 	 * 通过Id查询管理员信息
 	 */
-	Admin getAdminById(int id);
+	Admin getAdminById(String id);
 	
 	/*
 	 * 通过管理员名查询管理员信息

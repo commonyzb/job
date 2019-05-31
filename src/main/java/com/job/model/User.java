@@ -3,7 +3,7 @@ package com.job.model;
 
 public class User {
 
-	private Integer id;
+	private String id;
 	private String username;
 	private String password;
 	private String salt;
@@ -11,11 +11,11 @@ public class User {
 	private int freeze = 0;
 	
 	
-    public Integer getId() {
+    public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

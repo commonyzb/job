@@ -41,15 +41,6 @@ public class AdminServiceImpl implements AdminService{
 		return 0;
 	}
 	
-	/*
-	 * 通过Id删除一位管理员
-	 * @see com.job.service.AdminService#delAdmin(int)
-	 */
-	@Override
-	public int delAdmin(int id) {
-		// TODO Auto-generated method stub
-		return adminDAO.delAdminById(id);
-	}
 
 	/*
 	 * 更新管理员信息
@@ -72,7 +63,7 @@ public class AdminServiceImpl implements AdminService{
 	 * @see com.job.service.AdminService#getAdminById(int)
 	 */
 	@Override
-	public Admin getAdminById(int id) {
+	public Admin getAdminById(String id) {
 		// TODO Auto-generated method stub		
 		return adminDAO.getAdminById(id);
 	}
@@ -95,6 +86,16 @@ public class AdminServiceImpl implements AdminService{
 	public List<Admin> getAllAdmin() {
 		// TODO Auto-generated method stub
 		return adminDAO.getAllAdmin();
+	}
+
+	/*
+	 * 通过ID删除管理员
+	 * @see com.job.service.AdminService#delAdmin(java.lang.String)
+	 */
+	@Override
+	public int delAdmin(String id) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

@@ -30,7 +30,7 @@ public class KnowledgeServiceImpl implements KnowledgeService{
 	 * @see com.job.service.KnowledgeService#delKnowledge(int)
 	 */
 	@Override
-	public int delKnowledge(int id) {
+	public int delKnowledge(String id) {
 		// TODO Auto-generated method stub		
 		return knowledgeDAO.delKnowledgeById(id);		
 	}
@@ -61,7 +61,7 @@ public class KnowledgeServiceImpl implements KnowledgeService{
 	 * @see com.job.service.KnowledgeService#getKnowledgeById(int)
 	 */
 	@Override
-	public Knowledge getKnowledgeById(int id) {
+	public Knowledge getKnowledgeById(String id) {
 		// TODO Auto-generated method stub
 		return knowledgeDAO.getKnowledgeById(id);
 	}

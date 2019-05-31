@@ -14,22 +14,14 @@ public class Admin
     private Integer select = 0;
     private Integer freeze = 0;
 
-	
-
     public String getId() {
         return id;
     }
-/*	
-	public void setId(Integer id) {
+
+	public void setId(String id) {
         this.id = id;
     }
-*/
-    @Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return id+" "+admin_name+" "+admin_password+" "+salt+" "+master+" "+froze+" "+delete+" "+repassword+" "+select+" "+freeze;
-	}
-
+	
 	public String getSalt() {
 		return salt;
 	}
@@ -119,4 +111,10 @@ public class Admin
     public void setFreeze(Integer freeze) {
         this.freeze = freeze;
     }
+    
+    @Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return id+" "+admin_name+" "+admin_password+" "+salt+" "+master+" "+froze+" "+delete+" "+repassword+" "+select+" "+freeze;
+	}
 }

@@ -14,7 +14,7 @@ public interface KnowledgeService
 	/*
 	 * 通过Id删除学历信息
 	 */
-	int delKnowledge(int id);
+	int delKnowledge(String id);
 	
 	/*
 	 * 删除一条学历信息
@@ -29,7 +29,7 @@ public interface KnowledgeService
 	/*
 	 * 通过Id查询学历信息
 	 */
-	Knowledge getKnowledgeById(int id);
+	Knowledge getKnowledgeById(String id);
 	
 	/*
 	 * 通过学历名查询简历信息
