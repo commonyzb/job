@@ -3,7 +3,7 @@ package com.job.model;
 import java.util.Date;
 
 public class UserDetail {
-    private Integer id;
+    private String id;
 
     private String username;
 
@@ -25,11 +25,11 @@ public class UserDetail {
     
     private Integer freeze = 0;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

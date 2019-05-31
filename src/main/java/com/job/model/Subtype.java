@@ -1,27 +1,27 @@
 package com.job.model;
 
 public class Subtype {
-    private Integer id;
+    private String id;
 
-    private Integer supertypeid;
+    private String supertypeid;
 
     private String typename;
 
     private Integer hit = 0;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Integer getSupertypeid() {
+    public String getSupertypeid() {
         return supertypeid;
     }
 
-    public void setSupertypeid(Integer supertypeid) {
+    public void setSupertypeid(String supertypeid) {
         this.supertypeid = supertypeid;
     }
 

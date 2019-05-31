@@ -3,7 +3,7 @@ package com.job.model;
 import java.util.Date;
 
 public class Resume {
-    private Integer id;
+    private String id;
 
     private String username;
 
@@ -49,17 +49,17 @@ public class Resume {
 
     private Date createtime;
 
-    private Integer typeid;
+    private String typeid;
 
     private Integer hit = 0;
 
     private Integer freeze = 0;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -239,11 +239,11 @@ public class Resume {
         this.createtime = createtime;
     }
 
-    public Integer getTypename() {
+    public String getTypename() {
         return typeid;
     }
 
-    public void setTypename(Integer typeid) {
+    public void setTypename(String typeid) {
         this.typeid = typeid;
     }
 
