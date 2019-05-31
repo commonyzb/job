@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class Recruitment {
 	
-    private Integer id;
+    private String id;
 
     private String position;
 
-    private Integer userid;
+    private String userid;
     
     private String username;
     
@@ -42,11 +42,11 @@ public class Recruitment {
     
     private Integer freeze = 0;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -58,11 +58,11 @@ public class Recruitment {
         this.position = position == null ? null : position.trim();
     }
 
-    public Integer getUserid() {
+    public String getUserid() {
 		return userid;
 	}
 
-	public void setUserid(Integer userid) {
+	public void setUserid(String userid) {
 		this.userid = userid;
 	}
 

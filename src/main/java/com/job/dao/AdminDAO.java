@@ -34,7 +34,7 @@ public interface AdminDAO {
 	 * 通过id获取管理员账号信息
 	 */
 	@Select({"SELECT * FROM", TABLE_NAME, "WHERE id = #{id}"})
-	public Admin getAdminById(@Param("id") int id);
+	public Admin getAdminById(@Param("id") String id);
 	
 	/*
 	 * 通过管理员名字查询管理员信息

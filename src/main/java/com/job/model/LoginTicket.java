@@ -3,9 +3,9 @@ package com.job.model;
 import java.util.Date;
 
 public class LoginTicket {
-    private Integer id;
+    private String id;
 
-    private Integer userid;
+    private String userid;
 
     private String ticket;
     
@@ -17,19 +17,19 @@ public class LoginTicket {
 
     private Integer status = 0;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Integer getUserid() {
+    public String getUserid() {
         return userid;
     }
 
-    public void setUserid(Integer userid) {
+    public void setUserid(String userid) {
         this.userid = userid;
     }
 

@@ -4,7 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-<<<<<<< HEAD
 	<properties resource="application.properties"/>
     <settings>
         <!-- Globally enables or disables any caches configured in any mapper under this configuration -->
@@ -22,74 +21,27 @@
     	<typeAlias alias="admin" type="com.job.model.Admin"/>
     	<typeAlias alias="knowledge" type="com.job.model.Knowledge"/>
     </typeAliases>
-    <!-- 指定 MyBatis 所用日志的具体实现 -->
-	<!-- <settings> <setting name="logImpl" value="LOG4J"/> </settings> -->
-	<environments default="development">
-		<!-- 环境配置，即连接的数据库。 -->
-		<environment id="development">
-=======
-   <properties resource="application.properties" />
-	<settings>
-		<!-- Globally enables or disables any caches configured in any mapper under 
-			this configuration -->
-		<setting name="cacheEnabled" value="true" />
-		<!-- Sets the number of seconds the driver will wait for a response from 
-			the database -->
-		<setting name="defaultStatementTimeout" value="3000" />
-		<!-- Enables automatic mapping from classic database column names A_COLUMN 
-			to camel case classic Java property names aColumn -->
-		<setting name="mapUnderscoreToCamelCase" value="true" />
-		<!-- Allows JDBC support for generated keys. A compatible driver is required. 
-			This setting forces generated keys to be used if set to true, as some drivers 
-			deny compatibility but still work -->
-		<setting name="useGeneratedKeys" value="true" />
-	</settings>
-
-	
+  	
 	<!-- 指定 MyBatis 所用日志的具体实现 -->
 	<!-- <settings> <setting name="logImpl" value="LOG4J"/> </settings> -->
 	<environments default="mysql">
 		<!-- 环境配置，即连接的数据库。 -->
 		<environment id="mysql">
->>>>>>> 7a5bf986dccd408f1f2a7d63b106d2847cb1db8a
 			<!-- 指定事务管理类型，type="JDBC"指直接简单使用了JDBC的提交和回滚设置 -->
 			<transactionManager type="JDBC" />
 			<!-- dataSource指数据源配置，POOLED是JDBC连接对象的数据源连接池的实现。 -->
 			<dataSource type="POOLED">
-<<<<<<< HEAD
 				<property name="driver" value="${spring.datasource.driver-class-name}" />
 				<property name="url"    value="${spring.datasource.url}" />
 				<property name="username"  value="${spring.datasource.username}" />
 				<property name="password"  value="${spring.datasource.password}" />								
 			</dataSource>
-		</environment>
+		</environment>	
 	</environments>
     
 	<mappers>
 		<package name="com.job.dao"/>
 	</mappers>
-=======
-
-				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url" value="${spring.datasource.url}" />
-				<property name="username"
-					value="${spring.datasource.username}" />
-				<property name="password"
-					value="${spring.datasource.password}" />
-				<!-- <property name="driver" value="com.mysql.jdbc.Driver"/> <property 
-					name="url" value="jdbc:mysql://127.0.0.1:3306/testdate"/> <property name="username" 
-					value="root"/> <property name="password" value="123456"/> -->
-			</dataSource>
-		</environment>
-	</environments>
-
-	<!-- Continue going here -->
-	<mappers>
-		<mapper class="com.job.dao.LoginTicketDAO" />
-		<mapper class="com.job.dao.MessageDAO" />
-	</mappers>
-
->>>>>>> 7a5bf986dccd408f1f2a7d63b106d2847cb1db8a
+				
     <!-- Continue going here -->
-
 </configuration>

@@ -1,17 +1,16 @@
 package com.job;
 
-<<<<<<< HEAD
+
 import java.util.Date;
 import java.util.List;
 
-=======
->>>>>>> 7a5bf986dccd408f1f2a7d63b106d2847cb1db8a
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-<<<<<<< HEAD
 import com.job.dao.AdminDAO;
 import com.job.dao.KnowledgeDAO;
 import com.job.model.Admin;
@@ -20,13 +19,12 @@ import com.job.service.AdminService;
 import com.job.serviceImpl.AdminServiceImpl;
 import com.job.serviceImpl.KnowledgeServiceImpl;
 
-=======
->>>>>>> 7a5bf986dccd408f1f2a7d63b106d2847cb1db8a
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class JobApplicationTests {
 	
-<<<<<<< HEAD
+
 	@Autowired
 	private AdminDAO adminDAO;
 	
@@ -38,6 +36,7 @@ public class JobApplicationTests {
 	
 	@Autowired
 	private KnowledgeServiceImpl knowledgeService;
+	
 	@Test
 	public void contextLoads() {
 	
@@ -47,8 +46,8 @@ public class JobApplicationTests {
 		
 //	System.out.println(knowledgeService.delKnowledge(3));	
 	
-	Knowledge knowledge=knowledgeService.getKnowledgeById(4);
-	System.out.println(knowledge.toString());
+//	Knowledge knowledge=knowledgeService.getKnowledgeById(4);
+//	System.out.println(knowledge.toString());
 //	Admin admin=new Admin("hello","heo",0,0,0,0,0,0);
 //	admin.setSalt("hga");
 //	System.out.println(adminDAO.addAdmin(admin));
@@ -107,11 +106,7 @@ public class JobApplicationTests {
 //		System.out.println(adminDAO.getAdminById(3).toString());
 //		adminDAO.setDelete(0,3);
 //		System.out.println(adminDAO.getAdminById(3).toString());
-=======
-	@Test
-	public void contextLoads() {
-		
->>>>>>> 7a5bf986dccd408f1f2a7d63b106d2847cb1db8a
+	
 	}
-
 }
+

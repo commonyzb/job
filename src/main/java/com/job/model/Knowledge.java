@@ -2,7 +2,7 @@ package com.job.model;
 
 public class Knowledge 
 {
-    private int id;
+    private String id;
     private String type_name="";
     
     
@@ -25,11 +25,11 @@ public class Knowledge
 	}
 */
 
-	public Integer getId() {
+	public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

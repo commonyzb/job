@@ -3,11 +3,11 @@ package com.job.model;
 import java.util.Date;
 
 public class Message {
-    private Integer id;
+    private String id;
 
-    private Integer from;
+    private String from;
 
-    private Integer to;
+    private String to;
 
     private Date date;
 
@@ -15,27 +15,27 @@ public class Message {
 
     private String msg;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public Integer getFrom() {
+    public String getFrom() {
         return from;
     }
 
-    public void setFrom(Integer from) {
+    public void setFrom(String from) {
         this.from = from;
     }
 
-    public Integer getTo() {
+    public String getTo() {
         return to;
     }
 
-    public void setTo(Integer to) {
+    public void setTo(String to) {
         this.to = to;
     }
 
