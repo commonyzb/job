@@ -1,6 +1,7 @@
 package com.job.serviceImpl;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.job.dao.AdminDAO;
 import com.job.model.Admin;
 import com.job.service.AdminService;
+import com.job.util.MD5Util;
 
 @Service
 public class AdminServiceImpl implements AdminService{
@@ -22,6 +24,10 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public int addAdmin(Admin admin) {		
 		// TODO Auto-generated method stub
+		//密码+随机盐
+		String salt=UUID.randomUUID().toString();
+		admin.setSalt(salt);
+		admin.setAdmin_password(MD5Util.MD5(admin.getAdmin_password()+salt));
 		return adminDAO.addAdmin(admin);		
 	}
 	
