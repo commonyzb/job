@@ -137,7 +137,7 @@ public interface RecruitmentDAO {
 	 * 根据招聘信息id，修改行业类型
 	 */
 	@Update({"UPDATE ", TABLE_NAME, "SET typeid = #{typeid} WHERE id = #{id} AND freeze=0"})
-	public int setTypeid(@Param("typeid") int typeid, @Param("id") String id);
+	public int setTypeid(@Param("typeid") String typeid, @Param("id") String id);
 	
 	/*
 	 * 根据招聘信息id，修改是否招聘结束，0为没有结束，1为结束，默认为0

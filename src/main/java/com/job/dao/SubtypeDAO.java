@@ -32,13 +32,13 @@ public interface SubtypeDAO {//职务子表
 	 * */
 	@Update({"UPDATE ",TABLE_NAME," SET typename=#{typename} WHERE id =#{id}"})
 	
-	public int setSubtype(@Param("id") int id,@Param("typename") String typename);
+	public int setSubtype(@Param("id") String id,@Param("typename") String typename);
 	
 	/*
 	 * 根据id查询职务信息
 	 * */
 	@Select({"SELECT * FROM ",TABLE_NAME," WHERE id= #{id}"})
-	public Subtype getSubtype(int id);
+	public Subtype getSubtype(String id);
 	
 	/*
 	 * 查询所有职务信息

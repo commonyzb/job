@@ -31,7 +31,7 @@ public interface ShopDetailDAO {
 	 * @return
 	 */
 	@Delete({"delete from "+TABLE_NAME+" where id=#{id}"})
-	public int deleteShopDetail(int id);
+	public int deleteShopDetail(String id);
 	
 	/**
 	 * 更新商家详细信息
@@ -57,7 +57,7 @@ public interface ShopDetailDAO {
 	 * @return
 	 */
 	@Select({"select * from "+TABLE_NAME+" where id=#{id}"})
-	public ShopDetail selectShopDetailById(int id);
+	public ShopDetail selectShopDetailById(String id);
 	
 	/**
 	 * 查看所有商家的详细信息
