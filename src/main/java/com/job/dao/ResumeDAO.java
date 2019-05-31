@@ -38,13 +38,13 @@ public interface ResumeDAO {
 	 * @param freeze 简历状态
 	 */
 	@Update({"update "+TABLE_NAME+" set freeze = #{freeze} where id = #{id}"} )
-	public int freezeResume(@Param("freeze") int freeze,@Param("id") int id);
+	public int freezeResume(@Param("freeze") int freeze,@Param("id") String id);
 	
 	/**
 	 * 真正删除简历信息
 	 */
 	@Delete({"delete from "+TABLE_NAME+" where id = #{id}"})
-	public int deleteResume(int id);
+	public int deleteResume(String id);
 	
 	/**
 	 * 更新简历信息
@@ -64,7 +64,7 @@ public interface ResumeDAO {
 	 * 按id查看简历信息
 	 */
 	@Select({"select * from "+TABLE_NAME+" where id=#{id} "})
-	public Resume selectResumeById(int id);
+	public Resume selectResumeById(String id);
 	
 	/**
 	 * 按用户名查看简历信息
