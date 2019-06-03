@@ -21,12 +21,12 @@ public class ResumeServiceImpl implements ResumeService{
 	}
 
 	@Override
-	public int deleteResume(int id) {
+	public int deleteResume(String id) {
 		return this.resumeDao.deleteResume(id);
 	}
 
 	@Override
-	public int freezeResume(int freeze, int id) {
+	public int freezeResume(int freeze, String id) {
 		return this.resumeDao.freezeResume(freeze, id);
 	}
 
@@ -36,7 +36,7 @@ public class ResumeServiceImpl implements ResumeService{
 	}
 
 	@Override
-	public Resume getResumeById(int id) {
+	public Resume getResumeById(String id) {
 		return this.resumeDao.selectResumeById(id);
 	}
 

@@ -28,7 +28,7 @@ public class SupertypeServiceImpl implements SupertypeService{
 	}
 
 	@Override
-	public Subtype getSupertypeById(int id) {
+	public Subtype getSupertypeById(String id) {
 		// TODO Auto-generated method stub
 		return this.sup.getSupertypeById(id);
 	}
@@ -40,7 +40,7 @@ public class SupertypeServiceImpl implements SupertypeService{
 //	}
 
 	@Override
-	public int setTypenameById(int id, String typename) {
+	public int setTypenameById(String id, String typename) {
 		// TODO Auto-generated method stub
 		return this.sup.updateTypenameById(id, typename);
 	}

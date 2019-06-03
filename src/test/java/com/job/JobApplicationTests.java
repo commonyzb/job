@@ -1,21 +1,17 @@
 package com.job;
 
-<<<<<<< HEAD
+
 
 import java.util.Date;
 import java.util.List;
 
 
-=======
-
->>>>>>> a248d2d4c2da5424dc95722818fad56820594d2a
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-<<<<<<< HEAD
 import com.job.dao.AdminDAO;
 import com.job.dao.KnowledgeDAO;
 import com.job.model.Admin;
@@ -112,15 +108,8 @@ public class JobApplicationTests {
 //		adminDAO.setDelete(0,3);
 //		System.out.println(adminDAO.getAdminById(3).toString());
 	
-=======
-
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class JobApplicationTests {
-	@Test
-	public void contextLoads() {
-		
->>>>>>> a248d2d4c2da5424dc95722818fad56820594d2a
 	}
 }
+
+
 

@@ -4,10 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-<<<<<<< HEAD
 	<properties resource="application.properties"/>
-=======
->>>>>>> a248d2d4c2da5424dc95722818fad56820594d2a
+
     <settings>
         <!-- Globally enables or disables any caches configured in any mapper under this configuration -->
         <setting name="cacheEnabled" value="true"/>
@@ -20,7 +18,7 @@
          as some drivers deny compatibility but still work -->
         <setting name="useGeneratedKeys" value="true"/>
     </settings>
-<<<<<<< HEAD
+
     <typeAliases>
     	<typeAlias alias="admin" type="com.job.model.Admin"/>
     	<typeAlias alias="knowledge" type="com.job.model.Knowledge"/>
@@ -47,8 +45,5 @@
 		<package name="com.job.dao"/>
 	</mappers>
 				
-=======
-
->>>>>>> a248d2d4c2da5424dc95722818fad56820594d2a
     <!-- Continue going here -->
 </configuration>

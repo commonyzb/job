@@ -23,14 +23,14 @@ public class LoginTicketServiceImpl implements LoginTicketService{
     
 	//删除LoginTIcket
 	@Override
-	public int delectLoginTicket(int id) {
+	public int delectLoginTicket(String id) {
 		// TODO Auto-generated method stub
 		return LoginTicketDao.DelectTicket(id);
 	}
 
 	//根据ID查询LoginTicket实体
 	@Override
-	public LoginTicket getLoginTicketById(int id) {
+	public LoginTicket getLoginTicketById(String id) {
 		// TODO Auto-generated method stub
 		return LoginTicketDao.getLoginTicketById(id);
 	}

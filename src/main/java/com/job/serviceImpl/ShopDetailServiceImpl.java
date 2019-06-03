@@ -21,7 +21,7 @@ public class ShopDetailServiceImpl implements ShopDetailService{
 	}
 
 	@Override
-	public int deleteShopDetail(int id) {
+	public int deleteShopDetail(String id) {
 		return this.shopDetailDao.deleteShopDetail(id);
 	}
 
@@ -36,7 +36,7 @@ public class ShopDetailServiceImpl implements ShopDetailService{
 	}
 
 	@Override
-	public ShopDetail getShopDetailById(int id) {
+	public ShopDetail getShopDetailById(String id) {
 		return this.shopDetailDao.selectShopDetailById(id);
 	}
 

@@ -21,7 +21,7 @@ public interface ResumeService {
 	 * @param id
 	 * @return 成功返回1，失败返回0
 	 */
-	public int deleteResume(int id);
+	public int deleteResume(String id);
 	
 	/**
 	 * 隐藏用户简历(通过freeze冻结)
@@ -29,7 +29,7 @@ public interface ResumeService {
 	 * @param id
 	 * @return 成功返回1，失败返回0
 	 */
-	public int freezeResume(int freeze,int id);
+	public int freezeResume(int freeze,String id);
 	
 	/**
 	 * 更新用户简历
@@ -43,7 +43,7 @@ public interface ResumeService {
 	 * @param id
 	 * @return 返回用户简历实体类
 	 */
-	public Resume getResumeById(int id);
+	public Resume getResumeById(String id);
 	
 	/**
 	 * 通过用户名查询简历

@@ -25,7 +25,7 @@ public interface SupertypeService {
 	 * @param id
 	 * @return
 	 */
-	public Subtype getSupertypeById(int id);
+	public Subtype getSupertypeById(String id);
 //	/**
 //	 * 根据id删除类别
 //	 * @param id
@@ -38,6 +38,6 @@ public interface SupertypeService {
 	 * @param typename
 	 * @return
 	 */
-	public int setTypenameById(@Param("id") int id,@Param("typename") String typename);
+	public int setTypenameById(@Param("id") String id,@Param("typename") String typename);
 
 }

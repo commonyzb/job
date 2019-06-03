@@ -20,13 +20,13 @@ public interface SubtypeService {
 	 * @param typename
 	 * @return
 	 */
-	public int setSubtype(int id,String typename);
+	public int setSubtype(String id,String typename);
 	/**
 	 * 根据id查询职务
 	 * @param id
 	 * @return
 	 */
-	public Subtype getSubtype(int id);
+	public Subtype getSubtype(String id);
 	/**
 	 * 查询所有职务
 	 * @return

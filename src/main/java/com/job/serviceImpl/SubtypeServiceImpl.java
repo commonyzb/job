@@ -22,13 +22,13 @@ public class SubtypeServiceImpl implements SubtypeService{
 	}
 
 	@Override
-	public int setSubtype(int id, String typename) {
+	public int setSubtype(String id, String typename) {
 		// TODO Auto-generated method stub
 		return this.subtypedao.setSubtype(id, typename);
 	}
 
 	@Override
-	public Subtype getSubtype(int id) {
+	public Subtype getSubtype(String id) {
 		// TODO Auto-generated method stub
 		return this.subtypedao.getSubtype(id);
 	}

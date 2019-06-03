@@ -22,7 +22,7 @@ public interface LoginTicketDAO {
 	
 	/*根据Id查询LoginTicket*/
 	@Select({"SELECT * FROM",TABLE_NAME," WHERE id = #{id}"})
-	public LoginTicket getLoginTicketById(int id);
+	public LoginTicket getLoginTicketById(String id);
 	
 	
 	/*向表中添加LoginTicket*/
@@ -31,22 +31,22 @@ public interface LoginTicketDAO {
 	
 	/*更新LoginTicket实体中ticket字段*/
 	@Update({"UPDATE",TABLE_NAME,"SET ticket = #{ticket} WHERE id = #{id}"})
-	public int UpdateTicket(@Param("ticket") String ticket,@Param("id") int id);
+	public int UpdateTicket(@Param("ticket") String ticket,@Param("id") String id);
 	
 	/*更新LoginTicket实体中device字段*/
 	@Update({"UPDATE",TABLE_NAME,"SET device = #{device} WHERE id = #{id}"})
-	public int UpdateDevice(@Param("device") String device,@Param("id") int id);
+	public int UpdateDevice(@Param("device") String device,@Param("id") String id);
 
 	/*更新LoginTicket实体中ip字段*/
 	@Update({"UPDATE",TABLE_NAME,"SET ip = #{ip} WHERE id = #{id}"})
-	public int UpdateIp(@Param("ip") String ip,@Param("id") int id);
+	public int UpdateIp(@Param("ip") String ip,@Param("id") String id);
 	
 	/*更新LoginTicket实体中expried字段*/
 	@Update({"UPDATE",TABLE_NAME,"SET expired = #{expired} WHERE id = #{id}"})
-	public int UpdateExpired(@Param("expired") Date expired,@Param("id") int id);
+	public int UpdateExpired(@Param("expired") Date expired,@Param("id") String id);
 	
 	/*更新LoginTicket实体中status字段用于标记是否可用*/
 	@Update({"UPDATE",TABLE_NAME,"SET status = 0 WHERE id = #{id}"})
-	public int DelectTicket(int id);
+	public int DelectTicket(String id);
 
 }

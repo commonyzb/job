@@ -41,7 +41,7 @@ public interface SupertypeDAO {
 	 * @return
 	 */
 	@Select({"SELECT * FROM "+ TABLE_NAME+ " WHERE id = #{id}"})
-	public Subtype getSupertypeById(int id);
+	public Subtype getSupertypeById(String id);
 	
 //	/*
 //	 *根据id删除一个类别
@@ -50,7 +50,7 @@ public interface SupertypeDAO {
 //	 * @return
 //	 */
 //	@Delete({"DELETE * FROM "+ TABLE_NAME+ " WHERE id = #{id}"})
-//	public int deleteSubtype(int id);
+//	public int deleteSubtype(String id);
 	/*
 	 * 根据id修改类别名
 	 * 
@@ -59,6 +59,6 @@ public interface SupertypeDAO {
 	 * @return
 	 */
 	@Update({"UPDATE "+ TABLE_NAME+ " SET typename=#{typename} WHERE id=#{id}"})
-	public int updateTypenameById(@Param("id") int id,@Param("typename") String typename);
+	public int updateTypenameById(@Param("id") String id,@Param("typename") String typename);
 	
 }

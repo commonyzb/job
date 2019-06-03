@@ -23,42 +23,42 @@ public class RecruitmentRecordServiceImpl implements RecruitmentRecordService {
 	}
 
 	@Override
-	public RecruitmentRecord getRecruitmentRecorById(int id) {
+	public RecruitmentRecord getRecruitmentRecorById(String id) {
 		return recruitmentRecordDAO.getRecruitmentRecorById(id);
 	}
 
 	@Override
-	public RecruitmentRecord getRecruitmentRecorByRecid(int recruitmentid) {
+	public RecruitmentRecord getRecruitmentRecorByRecid(String recruitmentid) {
 		return recruitmentRecordDAO.getRecruitmentRecorByRecid(recruitmentid);
 	}
 
 	@Override
-	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(int companyid, int start, int num) {
+	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(String companyid, int start, int num) {
 		return recruitmentRecordDAO.getRecruitmentRecorListByComid(companyid, start, num);
 	}
 
 	@Override
-	public int setRecruitmentid(int recruitmentid, int id) {
+	public int setRecruitmentid(String recruitmentid, String id) {
 		return recruitmentRecordDAO.setRecruitmentid(recruitmentid, id);
 	}
 
 	@Override
-	public int setCompanyid(int companyid, int id) {
+	public int setCompanyid(String companyid, String id) {
 		return recruitmentRecordDAO.setCompanyid(companyid, id);
 	}
 
 	@Override
-	public int setTime(Date time, int id) {
+	public int setTime(Date time, String id) {
 		return recruitmentRecordDAO.setTime(time, id);
 	}
 
 	@Override
-	public int setState(int state, int id) {
+	public int setState(int state, String id) {
 		return recruitmentRecordDAO.setState(state, id);
 	}
 
 	@Override
-	public int setFreeze(int freeze, int id) {
+	public int setFreeze(int freeze, String id) {
 		return recruitmentRecordDAO.setFreeze(freeze, id);
 	}
 

@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
 
 	/* 根据用户id获取一个用户实体类user */
 	@Override
-	public User getUserByid(int id) {
+	public User getUserByid(String id) {
 		// TODO Auto-generated method stub
 		return userDAO.getUserByid(id);
 	}
@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 
 	/* 根据用户id和password更新一条用户密码信息 */
 	@Override
-	public int setpasswordByid(int id, String password) {
+	public int setpasswordByid(String id, String password) {
 		// TODO Auto-generated method stub
 		return userDAO.setpasswordByid(id, password);
 	}
@@ -43,13 +43,13 @@ public class UserServiceImpl implements UserService {
 
 
 	@Override
-	public int setTypeByid(int id, int type) {
+	public int setTypeByid(String id, int type) {
 		// TODO Auto-generated method stub
 		return userDAO.settypeByid(id, type);
 	}
 
 	@Override
-	public int setFreezeByid(int id, int freeze) {
+	public int setFreezeByid(String id, int freeze) {
 		// TODO Auto-generated method stub
 		return userDAO.setfreezeByid(id, freeze);
 	}

@@ -19,7 +19,7 @@ public interface ShopDetailService {
 	 * @param id
 	 * @return 成功返回1；失败返回0
 	 */
-	public int deleteShopDetail(int id);
+	public int deleteShopDetail(String id);
 	
 	/**
 	 * 更新商家详细信息
@@ -40,7 +40,7 @@ public interface ShopDetailService {
 	 * @param id
 	 * @return 返回商家详细信息实体类
 	 */
-	public ShopDetail getShopDetailById(int id);
+	public ShopDetail getShopDetailById(String id);
 	
 	/**
 	 * 查询所有商家详细信息

@@ -36,25 +36,25 @@ public interface RecruitmentRecordDAO {
 	 * 根据招聘信息id获取该招聘投放记录的全部信息
 	 */
 	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE recruitmentid = #{recruitmentid} AND freeze=0"})
-	public RecruitmentRecord getRecruitmentRecorByRecid(int recruitmentid);
+	public RecruitmentRecord getRecruitmentRecorByRecid(String recruitmentid);
 	
 	/*
 	 * 根据商家id获取某商家的全部招聘投放记录
 	 */
 	@Select({"SELECT * FROM ", TABLE_NAME, "WHERE companyid = #{companyid} AND freeze=0 LIMIT #{start},#{num}"})
-	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(@Param("companyid") int companyid, @Param("start") int start, @Param("num") int num);
+	public ArrayList<RecruitmentRecord> getRecruitmentRecorListByComid(@Param("companyid") String companyid, @Param("start") int start, @Param("num") int num);
 	
 	/*
 	 * 根据招聘信息id，修改招聘信息id
 	 */
 	@Update({"UPDATE ", TABLE_NAME, "SET recruitmentid = #{recruitmentid} WHERE id = #{id} AND freeze=0"})
-	public int setRecruitmentid(@Param("recruitmentid") int recruitmentid, @Param("id") String id);
+	public int setRecruitmentid(@Param("recruitmentid") String recruitmentid, @Param("id") String id);
 	
 	/*
 	 * 根据招聘信息id，修改商家账户
 	 */
 	@Update({"UPDATE ", TABLE_NAME, "SET companyid = #{companyid} WHERE id = #{id} AND freeze=0"})
-	public int setCompanyid(@Param("companyid") int companyid, @Param("id") String id);
+	public int setCompanyid(@Param("companyid") String companyid, @Param("id") String id);
 	
 	/*
 	 * 根据招聘信息id，修改投放时间

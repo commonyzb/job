@@ -22,7 +22,7 @@ public class RecruitmentServiceImpl implements RecruitmentService {
 	}
 	
 	@Override
-	public Recruitment getRecruitmentById(int id) {
+	public Recruitment getRecruitmentById(String id) {
 		return recruitmentDAO.getRecruitmentById(id);
 	}
 	
@@ -32,82 +32,82 @@ public class RecruitmentServiceImpl implements RecruitmentService {
 	}
 	
 	@Override
-	public int setPosition(String position, int id) {
+	public int setPosition(String position, String id) {
 		return recruitmentDAO.setPosition(position, id);
 	}
 
 	@Override
-	public int setDemend(String demend, int id) {
+	public int setDemend(String demend, String id) {
 		return recruitmentDAO.setDemend(demend, id);
 	}
 
 	@Override
-	public int setSalaryHight(int salaryHight, int id) {
+	public int setSalaryHight(int salaryHight, String id) {
 		return recruitmentDAO.setSalaryHight(salaryHight, id);
 	}
 
 	@Override
-	public int setSalaryLow(int salaryLow, int id) {
+	public int setSalaryLow(int salaryLow, String id) {
 		return recruitmentDAO.setSalaryLow(salaryLow, id);
 	}
 
 	@Override
-	public int setExperience(int experience, int id) {
+	public int setExperience(int experience, String id) {
 		return recruitmentDAO.setExperience(experience, id);
 	}
 
 	@Override
-	public int setWorktime(Date worktime, int id) {
+	public int setWorktime(Date worktime, String id) {
 		return recruitmentDAO.setWorktime(worktime, id);
 	}
 
 	@Override
-	public int setWorkplace(String workplace, int id) {
+	public int setWorkplace(String workplace, String id) {
 		return recruitmentDAO.setWorkplace(workplace, id);
 	}
 
 	@Override
-	public int setWorkdescribe(String workdescribe, int id) {
+	public int setWorkdescribe(String workdescribe, String id) {
 		return recruitmentDAO.setWorkdescribe(workdescribe, id);
 	}
 
 	@Override
-	public int setContacts(String contacts, int id) {
+	public int setContacts(String contacts, String id) {
 		return recruitmentDAO.setContacts(contacts, id);
 	}
 
 	@Override
-	public int setTel(String tel, int id) {
+	public int setTel(String tel, String id) {
 		return recruitmentDAO.setTel(tel, id);
 	}
 
 	@Override
-	public int setAddress(String address, int id) {
+	public int setAddress(String address, String id) {
 		return recruitmentDAO.setAddress(address, id);
 	}
 
 	@Override
-	public int setTime(Date time, int id) {
+	public int setTime(Date time, String id) {
 		return recruitmentDAO.setTime(time, id);
 	}
 
 	@Override
-	public int setHit(int hit, int id) {
+	public int setHit(int hit, String id) {
 		return recruitmentDAO.setHit(hit, id);
 	}
 
 	@Override
-	public int setTypeid(int typeid, int id) {
+	public int setTypeid(String typeid, String id) {
 		return recruitmentDAO.setTypeid(typeid, id);
 	}
 
 	@Override
-	public int setSuper(int freeze, int id) {
+	public int setSuper(int freeze, String id) {
 		return recruitmentDAO.setSuper(freeze, id);
 	}
 
 	@Override
-	public ArrayList<Recruitment> getRecruitmentListByUserid(int userid, int start, int num) {
+	public ArrayList<Recruitment> getRecruitmentListByUserid(String userid, int start, int num) {
 		return recruitmentDAO.getRecruitmentListByUserid(userid, start, num);
 	}
 
@@ -117,7 +117,7 @@ public class RecruitmentServiceImpl implements RecruitmentService {
 	}
 
 	@Override
-	public int setStatus(int status, int id) {
+	public int setStatus(int status, String id) {
 		return recruitmentDAO.setStatus(status, id);
 	}
 
