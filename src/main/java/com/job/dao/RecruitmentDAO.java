@@ -15,7 +15,7 @@ import com.job.model.Recruitment;
 public interface RecruitmentDAO {
 	
 	String TABLE_NAME = " recruitment ";
-	String INSERT_FIELDS = " userid,username,position,demend,salaryHight,salaryLow,experience,"
+	String INSERT_FIELDS = "id, userid,username,position,demend,salaryHight,salaryLow,experience,"
 		   + "worktime,workplace,workdescribe,contacts,tel,address,`time`,hit,typeid,status,freeze ";
 	String SELECT_FIELDS = " id," + INSERT_FIELDS;
 	
@@ -23,7 +23,7 @@ public interface RecruitmentDAO {
 	 * 插入一条招聘信息
 	 */
 	@Insert({"INSERT INTO ", TABLE_NAME, "(", INSERT_FIELDS, ") VALUES ( ",
-			"#{userid},#{username},#{position},#{demend},#{salaryHight},#{salaryLow},#{experience},#{worktime},",
+			"#{id},#{userid},#{username},#{position},#{demend},#{salaryHight},#{salaryLow},#{experience},#{worktime},",
 			"#{workplace},#{workdescribe},#{contacts},#{tel},#{address},#{time},#{hit},#{typeid},#{status},#{freeze})"})
 	public int addRecruitment(Recruitment recruitment);
 	

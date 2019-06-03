@@ -12,14 +12,14 @@ import com.job.model.User;
 @Mapper
 public interface UserDAO {
 	String TABLE_NAME = " user ";
-	String INSERT_FIELDS = " username, password, salt, type, freeze";
+	String INSERT_FIELDS = "id, username, password, salt, type, freeze";
 	String SELECT_FIELDS = " id, " + INSERT_FIELDS;
 
 	/*
 	 * 插入一条用户账号信息
 	 */
 	@Insert({ "INSERT INTO ", TABLE_NAME, "(", INSERT_FIELDS, ") VALUES ( ",
-			"#{username},#{password},#{salt},#{type},#{freeze})" })
+			"#{id},#{username},#{password},#{salt},#{type},#{freeze})" })
 	public int addUser(User user);
 
 	/*

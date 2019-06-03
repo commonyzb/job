@@ -13,14 +13,14 @@ import com.job.model.Message;
 @Mapper
 public interface MessageDAO {
 	String TABLE_NAME = " message";
-    String INSERT_FIELDS=" `from`,`to`,msg,date,status ";
+    String INSERT_FIELDS="id, `from`,`to`,msg,date,status ";
     
     /* 根据ID查询响应的Message*/
     @Select({"SELECT * FROM",TABLE_NAME,"WHERE id = #{id}"})
     public Message getMesageById(int id);
     
     /* 添加message */
-    @Insert({"INSERT INTO",TABLE_NAME,"(",INSERT_FIELDS,")"," VALUES(#{from},#{to},#{msg},#{date},#{status})"})
+    @Insert({"INSERT INTO",TABLE_NAME,"(",INSERT_FIELDS,")"," VALUES(#{id},#{from},#{to},#{msg},#{date},#{status})"})
     public int addMessage(Message message);
     
     /*更新Message实体中的From字段*/
