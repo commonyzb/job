@@ -15,7 +15,7 @@ import com.job.model.Supertype;
 @Mapper
 public interface SupertypeDAO {
 	String TABLE_NAME="supertype";//类别父表
-	String INSERT_FIELDS=" typename ";
+	String INSERT_FIELDS="id, typename ";
 	String SELECT_FIELDS=" id, ";
 	//id  父行业类别id  typename  父类行业
 	
@@ -25,7 +25,7 @@ public interface SupertypeDAO {
 	 * @return
 	 */
 	@Insert({"INSERT INTO "+ TABLE_NAME+ "("+ INSERT_FIELDS+ ") VALUES ( "+
-	"#{typename})"})
+	"#{id},#{typename})"})
 	public int addSupertype(Supertype supertype);
 	/*
 	 * 查询所有类别

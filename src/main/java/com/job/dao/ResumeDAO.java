@@ -15,7 +15,7 @@ import com.job.model.ShopDetail;
 @Mapper
 public interface ResumeDAO {
 	String TABLE_NAME = "resume";
-	String INSERT_FILEDS = " username , truename , sex , hight , knowledge , brithday "
+	String INSERT_FILEDS = "id, username , truename , sex , hight , knowledge , brithday "
 			+ ", address , naddress , nation , 	school , hobby , speciality , 	intruduce , "
 			+ "	experience , 	worktime , salaryHight , salaryLow , treatment , tel , email , "
 			+ "picture , createTime , typeid , hit , freeze ";
@@ -27,7 +27,7 @@ public interface ResumeDAO {
 	 * @return
 	 */
 	@Insert({"insert into "+TABLE_NAME+" ( "+INSERT_FILEDS+" ) values("
-			+ " #{userName} , #{trueName} , #{sex} , #{hight} , #{knowledge} , #{brithday} , #{address} ,"
+			+ "#{id}, #{userName} , #{trueName} , #{sex} , #{hight} , #{knowledge} , #{brithday} , #{address} ,"
 			+ " #{naddress} , #{nation} , #{school} , #{hobby} , #{speciality} , #{intruduce} ,  "
 			+ " #{experience} , #{workTime} , #{salaryHight} , #{salaryLow} , #{treatment} , #{tel} , "
 			+ "#{email} , #{picture} , #{createTime} , #{typeId} , #{hit} , #{freeze} )"})

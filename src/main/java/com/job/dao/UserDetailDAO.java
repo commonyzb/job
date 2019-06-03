@@ -12,14 +12,14 @@ import com.job.model.UserDetail;
 @Mapper
 public interface UserDetailDAO {
 	String TABLE_NAME = " user_detail ";
-	String INSERT_FIELDS = " username , age , sex , birthday , address , knowledgeId, email , tel , time ";
+	String INSERT_FIELDS = "id , username , age , sex , birthday , address , knowledgeId, email , tel , time ";
 	String SELECT_FIELDS = " id, " + INSERT_FIELDS;
 
 	/*
 	 * 插入一条用户个人信息
 	 */
 	@Insert({ "INSERT INTO ", TABLE_NAME, "(", INSERT_FIELDS, ") VALUES ( ",
-			"#{username},#{age},#{sex},#{birthday},#{address},#{knowledgeId},#{email},#{tel},#{time})" })
+			"#{id},#{username},#{age},#{sex},#{birthday},#{address},#{knowledgeId},#{email},#{tel},#{time})" })
 	@Options(useGeneratedKeys = true, keyProperty = "id")
 	public int addUserDetail(UserDetail userdetail);
 

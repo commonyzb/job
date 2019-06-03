@@ -16,14 +16,14 @@ import com.job.model.RecruitmentRecord;
 public interface RecruitmentRecordDAO {
 	
 	String TABLE_NAME = " recruitment_record ";
-	String INSERT_FIELDS = " recruitmentid,companyid,time,state,freeze";
+	String INSERT_FIELDS = "id, recruitmentid,companyid,time,state,freeze";
 	String SELECT_FIELDS = " id," + INSERT_FIELDS;
 	
 	/*
 	 * 插入一条招聘投放记录
 	 */
 	@Insert({"INSERT INTO ", TABLE_NAME, "(", INSERT_FIELDS, ") VALUES ( ",
-			"#{recruitmentid},#{companyid},#{time},#{state},#{freeze})"})
+			"#{id},#{recruitmentid},#{companyid},#{time},#{state},#{freeze})"})
 	public int addRecruitmentRecord(RecruitmentRecord recruitmentRecord);
 	
 	/*
