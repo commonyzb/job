@@ -2,7 +2,7 @@ package com.job.model;
 
 public class Knowledge 
 {
-    private String id;
+    private String id="";
     private String type_name="";
     
     
@@ -17,13 +17,14 @@ public class Knowledge
 		this.type_name = type_name;
 	}
 
-/*
-	public Knowledge(int id, String type_name) {
+
+
+	public Knowledge(String id, String type_name) {
 		super();
 		this.id = id;
 		this.type_name = type_name;
 	}
-*/
+
 
 	public String getId() {
         return id;

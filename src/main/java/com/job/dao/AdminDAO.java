@@ -14,14 +14,14 @@ import com.job.model.Admin;
 @Mapper
 public interface AdminDAO {
 	String TABLE_NAME = "admin";
-	String INSERT_FIELDS = "admin_name,admin_password,salt,master,froze,`delete`,repassword,`select`,freeze";
+	String INSERT_FIELDS = "id,admin_name,admin_password,salt,master,froze,`delete`,repassword,`select`,freeze";
 //	String SELECT_FIELDS = "id, " + INSERT_FIELDS;
 //	String UPDATE_FIELDS = " froze, delete, repassword, select";
 	 
 	/*
 	 * 增加一条管理员账号信息
 	 */
-	@Insert({"INSERT INTO", TABLE_NAME, "(",INSERT_FIELDS,") VALUES (#{admin_name},#{admin_password},#{salt},#{master},#{froze},#{delete},#{repassword},#{select},#{freeze})"})
+	@Insert({"INSERT INTO", TABLE_NAME, "(",INSERT_FIELDS,") VALUES (#{id},#{admin_name},#{admin_password},#{salt},#{master},#{froze},#{delete},#{repassword},#{select},#{freeze})"})
 	public int addAdmin(Admin admin);
 	
 	/*

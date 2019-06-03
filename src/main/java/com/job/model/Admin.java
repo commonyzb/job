@@ -3,7 +3,7 @@ package com.job.model;
 
 public class Admin 
 {
-    private String id;
+    private String id="";
     private String admin_name = "";  
     private String admin_password ="";
     private String salt="";
@@ -47,7 +47,22 @@ public class Admin
 	}
 
 	
-    public String getAdmin_name() {
+    public Admin(String id, String admin_name, String admin_password, String salt, Integer master, Integer froze,
+			Integer delete, Integer repassword, Integer select, Integer freeze) {
+		super();
+		this.id = id;
+		this.admin_name = admin_name;
+		this.admin_password = admin_password;
+		this.salt = salt;
+		this.master = master;
+		this.froze = froze;
+		this.delete = delete;
+		this.repassword = repassword;
+		this.select = select;
+		this.freeze = freeze;
+	}
+
+	public String getAdmin_name() {
         return admin_name;
     }
 

@@ -16,13 +16,13 @@ public interface KnowledgeDAO
 {
 	
 	String TABLE_NAME = "knowledge";
-	String INSERT_FIELD = "type_name";
+	String INSERT_FIELD = "id,type_name";
 	String SELECT_NAME = "id";
 	
 	/*
 	 * 添加一条学历信息
 	 */
-	@Insert({"INSERT INTO",TABLE_NAME,"(",INSERT_FIELD,") VALUES (#{type_name})" })
+	@Insert({"INSERT INTO",TABLE_NAME,"(",INSERT_FIELD,") VALUES (#{id},#{type_name})" })
 	public int addKnowledge(Knowledge knowldge);
 	
 	/*
